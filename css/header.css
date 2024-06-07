@@ -1,0 +1,48 @@
+.navbar-logo {
+  width: 6rem;
+}
+.conf-hawaii {
+  font-size: 0.9rem;
+  margin-left: 0.2rem;
+}
+
+.text-platzi {
+  color: #f6d2d6 !important;
+}
+.text-platzi:hover {
+  opacity: 80%;
+}
+
+
+.form-control {
+  background-color: #f9def7 !important;
+  border: 1px solid #505357; /* Borde oscuro */
+}
+
+
+.form-control:focus {
+  background-color: #181a1b;
+}
+
+/* Cambiar color del texto del navbar */
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.alex-brush-regular {
+  font-family: "Alex Brush", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+.open-sans{
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600 !important;
+  font-size: large;
+}
+.text-with-outline {
+  text-shadow: 0px 0px 2px rgb(165, 165, 165);
+  font-weight: 600;
+}

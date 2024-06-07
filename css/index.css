@@ -1,0 +1,65 @@
+/* html{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-size: 62.5%;
+} */
+
+body {
+  background-color: #fff8f2;
+}
+
+.card {
+  background-color: #FFF8F2;
+  border-radius: 10px; /* Agregamos borde redondeado */
+}
+
+
+.badge-custom {
+  background-color: #f9def7 !important;
+  color: #000; /* Puedes ajustar el color del texto según sea necesario */
+}
+
+
+.btn {
+  background-color: #ffc8dd;
+  border: 2px solid black !important; /* Agregamos el borde */
+  border-radius: 10px !important; /* Hacemos el borde redondeado */
+  border: none;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+
+.navbar-nav .nav-link {
+  font-size: 16px; /* Tamaño de fuente aumentado */
+}
+
+
+.card-body {
+  height: 100% !important; /* Hacemos que el cuerpo de la tarjeta ocupe toda la altura del div */
+}
+
+.card-img-top {
+  width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+  height: 200px; /* Altura fija para la imagen */
+  object-fit: cover; /* La imagen se ajustará para cubrir todo el contenedor */
+}
+
+.navbar-custom {
+  background-color: #fd9bb7;
+}
+
+
+.btn-light:hover {
+  background-color: #f49eb7; /* Cambia este color al que prefieras */
+}
+

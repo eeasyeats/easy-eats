@@ -1,0 +1,1233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/carousel.css">
+  <link rel="stylesheet" href="./css/place-time.css">
+  <link rel="stylesheet" href="./css/form.css">
+
+  <title>Easy Eats</title>
+</head>
+
+<style>
+
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+  }
+  .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      border-radius: 8px;
+  }
+  .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
+</style>
+
+
+
+<body data-spy="scroll" data-target="#navbar" data-offset="57">
+
+<!-- Header -->
+<nav class="navbar navbar-dark navbar-custom navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <span href="" class="conf-hawaii alex-brush-regular" style="font-size: 30px; color: white; text-shadow: 1px 1px 2px black;">Easy Eats</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-with-outline open-sans" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-with-outline .open-sans" href="sobre_nosotros.html">Sobre Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-with-outline .open-sans" href="contacto.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-with-outline .open-sans" href="index.html">Recetas</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Header -->
+
+
+  <!-- Main -->
+  <main id="main">
+    <div id="carousel" class="carousel slide" data-ride="carousel" data-pause="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="./assets/img/1.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./assets/img/2.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./assets/img/3.jpg" alt="Third slide">
+        </div>
+
+        <div class="overlay">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-6 offset-md-6 text-center text-md-right">
+                <span class="conf-hawaii alex-brush-regular" style="font-size: 60px; color: white; text-shadow: 1px 1px 2px black;">Easy Eats</span>
+
+            <p class="d-none d-md-block   conf-hawaii open-sans" style="font-size: 20px; color: white; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.705);">
+              Explora un mundo de sabores y texturas.
+              Encuentra inspiración en nuestras recetas cuidadosamente seleccionadas para que cada momento a la mesa sea una experiencia inolvidable.
+              <p class="d-none d-md-block   conf-hawaii open-sans" style="font-size: 20px; color: white; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.205);">
+                Desde platos clásicos hasta innovaciones culinarias, nuestro objetivo es llenar tu cocina con delicias que te hagan disfrutar en cada bocado.
+                Únete a nuestra comunidad y descubre un universo de posibilidades gastronómicas.
+              </p>
+              
+            </p>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- /Main -->
+
+<!-- Recipes -->
+<section id="recipes" class="mt-4 mb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center text-uppercase">
+        <small>Descubre nuestras</small>
+        <h2>Recetas</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 mb-3">
+        <input id="search-bar" type="text" class="form-control" placeholder="Buscar por categoría (e.g., Desayuno)">
+      </div>
+    </div>
+    
+    <div class="row" id="recipes-list">
+      <!-- Card -->
+      
+
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+        <div class="card">
+            <img class="card-img-top" src="./assets/speakers/pancakes.jpg" alt="Imagen de receta">
+            <div class="card-body">
+                <div class="badges mb-1">
+                    <span class="badge badge-js badge-custom">Desayuno</span>
+                    <span class="badge badge-react badge-custom">Saludable</span>
+                </div>
+                <h5 class="card-title mb-2">Panqueques de Plátano</h5>
+                <p class="card-text">
+                    Panqueques esponjosos hechos con plátano y avena, perfectos para un desayuno saludable.
+                </p>
+                <button class="btn btn-light" onclick="openModal('modal17')">Ver receta</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+        <div class="card">
+            <img class="card-img-top" src="./assets/speakers/tostada_aguacate.jpg" alt="Imagen de receta">
+            <div class="card-body">
+                <div class="badges mb-1">
+                    <span class="badge badge-js badge-custom badge-custom">Desayuno</span>
+                    <span class="badge badge-js badge-custom badge-custom">Saludable</span>
+                    <span class="badge badge-react badge-custom badge-custom">Rápido</span>
+                </div>
+                <h5 class="card-title mb-2">Tostadas de Aguacate y Huevo</h5>
+                <p class="card-text">
+                    Tostadas crujientes con aguacate cremoso y huevo, ideales para un desayuno rápido y nutritivo.
+                </p>
+                <button class="btn btn-light" onclick="openModal('modal16')">Ver receta</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+        <div class="card">
+            <img class="card-img-top" src="./assets/speakers/macarrones.jpg" alt="Imagen de receta">
+            <div class="card-body">
+                <div class="badges mb-1">
+                    <span class="badge badge-js badge-custom">Almuerzo</span>
+                    <span class="badge badge-js badge-custom">Queso</span>
+                    <span class="badge badge-react badge-custom">Macarrones</span>
+                </div>
+                <h5 class="card-title mb-2">Macarrones con queso</h5>
+                <p class="card-text">
+                    Macarrones cremosos con queso derretido, una receta clásica y reconfortante para el almuerzo.
+                </p>
+                <button class="btn btn-light" onclick="openModal('modal3')">Ver receta</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+        <div class="card">
+            <img class="card-img-top" src="./assets/speakers/sandwich.jpg" alt="Imagen de receta">
+            <div class="card-body">
+                <div class="badges mb-1">
+                    <span class="badge badge-js badge-custom">Almuerzo</span>
+                    <span class="badge badge-js badge-custom">Merienda</span>
+                    <span class="badge badge-js badge-custom">Queso</span>
+                    <span class="badge badge-react badge-custom">Sandwich</span>
+                </div>
+                <h5 class="card-title mb-2">Sándwich Vips Club</h5>
+                <p class="card-text">
+                    Un sándwich clásico con queso, jamón y vegetales frescos, perfecto para el almuerzo o la merienda.
+                </p>
+                <button class="btn btn-light" onclick="openModal('modal4')">Ver receta</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+        <div class="card">
+            <img class="card-img-top" src="./assets/speakers/quesadillas.jpg" alt="Imagen de receta">
+            <div class="card-body">
+                <div class="badges mb-1">
+                    <span class="badge badge-js badge-custom">Almuerzo</span>
+                    <span class="badge badge-react badge-custom">Fácil</span>
+                    <span class="badge badge-react badge-custom">Pollo</span> 
+                    <span class="badge badge-react badge-custom">Queso</span>
+                </div>
+                <h5 class="card-title mb-2">Quesadillas de Pollo</h5>
+                <p class="card-text">
+                    Quesadillas crujientes rellenas de pollo y queso derretido, una opción fácil y deliciosa para el almuerzo.
+                </p>
+                <button class="btn btn-light" onclick="openModal('modal5')">Ver receta</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+    <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+      <div class="card">
+          <img class="card-img-top" src="./assets/speakers/arroz_salchicha.jpg" alt="Imagen de receta">
+          <div class="card-body">
+              <div class="badges mb-1">
+                  <span class="badge badge-js badge-custom">Almuerzo</span>
+                  <span class="badge badge-react badge-custom">Arroz</span>
+                  <span class="badge badge-react badge-custom">Fácil</span>
+                  <span class="badge badge-react badge-custom">Salchicha</span>
+              </div>
+              <h5 class="card-title mb-2">Arroz con Salchicha</h5>
+              <p class="card-text">
+                  Un plato rápido y sencillo de preparar, con arroz y salchichas, ideal para un almuerzo completo.
+              </p>
+              <button class="btn btn-light" onclick="openModal('modal6')">Ver receta</button>
+          </div>
+      </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+      <div class="card">
+          <img class="card-img-top" src="./assets/speakers/tacos.jpg" alt="Imagen de receta">
+          <div class="card-body">
+              <div class="badges mb-1">
+                  <span class="badge badge-js badge-custom">Almuerzo</span>
+                  <span class="badge badge-react badge-custom">Tacos</span>
+              </div>
+              <h5 class="card-title mb-2">Tacos de Bistec</h5>
+              <p class="card-text">
+                  Tacos tradicionales de bistec jugoso, perfectos para un almuerzo lleno de sabor.
+              </p>
+              <button class="btn btn-light" onclick="openModal('modal7')">Ver receta</button>
+          </div>
+      </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+      <div class="card">
+          <img class="card-img-top" src="./assets/speakers/atun.jpg" alt="Imagen de receta">
+          <div class="card-body">
+              <div class="badges mb-1">
+                  <span class="badge badge-js badge-custom">Almuerzo</span>
+                  <span class="badge badge-react badge-custom">Atún</span>
+                  <span class="badge badge-react badge-custom">Ensalada</span>
+                  <span class="badge badge-react badge-custom">Fácil</span>
+              </div>
+              <h5 class="card-title mb-2">Ensalada de Atún</h5>
+              <p class="card-text">
+                  Fresca ensalada de atún con vegetales, una opción ligera y saludable para el almuerzo.
+              </p>
+              <button class="btn btn-light" onclick="openModal('modal8')">Ver receta</button>
+          </div>
+      </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+      <div class="card">
+          <img class="card-img-top" src="./assets/speakers/arroz_huevo.jpg" alt="Imagen de receta">
+          <div class="card-body">
+              <div class="badges mb-1">
+                  <span class="badge badge-js badge-custom">Almuerzo</span>
+                  <span class="badge badge-react badge-custom">Arroz</span>
+                  <span class="badge badge-react badge-custom">Fácil</span>
+                  <span class="badge badge-react badge-custom">Huevo</span>
+              </div>
+              <h5 class="card-title mb-2">Arroz con Huevo</h5>
+              <p class="card-text">
+                  Arroz acompañado de huevo frito, una combinación sencilla y deliciosa para cualquier día.
+              </p>
+              <button class="btn btn-light" onclick="openModal('modal9')">Ver receta</button>
+          </div>
+      </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+      <div class="card">
+          <img class="card-img-top" src="./assets/speakers/pollo_papas.jpg" alt="Imagen de receta">
+          <div class="card-body">
+              <div class="badges mb-1">
+                  <span class="badge badge-js badge-custom">Almuerzo</span>
+                  <span class="badge badge-react badge-custom">Pollo</span>
+                  <span class="badge badge-react badge-custom">Salchicha</span>
+              </div>
+              <h5 class="card-title mb-2">Pollo al Horno con Verduras</h5>
+              <p class="card-text">
+                  Jugoso pollo al horno acompañado de verduras, una opción saludable y deliciosa.
+              </p>
+              <button class="btn btn-light" onclick="openModal('modal10')">Ver receta</button>
+          </div>
+      </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+      <div class="card">
+          <img class="card-img-top" src="./assets/speakers/wrap_pollo.jpg" alt="Imagen de receta">
+          <div class="card-body">
+              <div class="badges mb-1">
+                  <span class="badge badge-js badge-custom">Almuerzo</span>
+                  <span class="badge badge-react badge-custom">Pollo</span>
+                  <span class="badge badge-react badge-custom">Aguacate</span>
+              </div>
+              <h5 class="card-title mb-2">Wrap de Pollo y Aguacate</h5>
+              <p class="card-text">
+                  Wrap relleno de pollo jugoso y aguacate fresco, perfecto para un almuerzo rápido y sabroso.
+              </p>
+              <button class="btn btn-light" onclick="openModal('modal11')">Ver receta</button>
+          </div>
+      </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+      <div class="card">
+          <img class="card-img-top" src="./assets/speakers/pasta_atun.jpg" alt="Imagen de receta">
+          <div class="card-body">
+              <div class="badges mb-1">
+                  <span class="badge badge-js badge-custom">Almuerzo</span>
+                  <span class="badge badge-react badge-custom">Pasta</span>
+                  <span class="badge badge-react badge-custom">Atún</span>
+              </div>
+              <h5 class="card-title mb-2">Pasta con Salsa de Tomate y Atún</h5>
+              <p class="card-text">
+                  Pasta con una rica salsa de tomate y atún, ideal para un almuerzo nutritivo y delicioso.
+              </p>
+              <button class="btn btn-light" onclick="openModal('modal12')">Ver receta</button>
+          </div>
+      </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+      <div class="card">
+          <img class="card-img-top" src="./assets/speakers/huevos_revueltos.jpg" alt="Imagen de receta">
+          <div class="card-body">
+              <div class="badges mb-1">
+                  <span class="badge badge-js badge-custom">Desayuno</span>
+                  <span class="badge badge-react badge-custom">Queso</span>
+                  <span class="badge badge-react badge-custom">Huevos</span>
+              </div>
+              <h5 class="card-title mb-2">Huevos Revueltos con Tomate y Queso</h5>
+              <p class="card-text">
+                  Huevos revueltos con tomate fresco y queso derretido, una opción deliciosa para el desayuno.
+              </p>
+              <button class="btn btn-light" onclick="openModal('modal13')">Ver receta</button>
+          </div>
+      </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+      <div class="card">
+          <img class="card-img-top" src="./assets/speakers/yogurt_frutas_miel.jpg" alt="Imagen de receta">
+          <div class="card-body">
+              <div class="badges mb-1">
+                  <span class="badge badge-js badge-custom">Desayuno</span>
+                  <span class="badge badge-js badge-custom">Merienda</span>
+                  <span class="badge badge-js badge-custom">Frutas</span>
+                  <span class="badge badge-react badge-custom">Yogurt</span>
+              </div>
+              <h5 class="card-title mb-2">Yogurt con Frutas y Miel</h5>
+              <p class="card-text">
+                  Yogurt acompañado de frutas frescas y un toque de miel, ideal para un desayuno o merienda ligera.
+              </p>
+              <button class="btn btn-light" onclick="openModal('modal14')">Ver receta</button>
+          </div>
+      </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+    <div class="card">
+        <img class="card-img-top" src="./assets/speakers/batido.jpg" alt="Imagen de receta">
+        <div class="card-body">
+            <div class="badges mb-1">
+                <span class="badge badge-js badge-custom">Desayuno</span>
+                <span class="badge badge-js badge-custom">Merienda</span>
+                <span class="badge badge-react badge-custom">Frutas</span>
+            </div>
+            <h5 class="card-title mb-2">Batido de Frutas</h5>
+            <p class="card-text">
+                Refrescante y nutritivo batido de frutas frescas, perfecto para empezar el día o como merienda.
+            </p>
+            <button class="btn btn-light" onclick="openModal('modal15')">Ver receta</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+    <div class="card">
+        <img class="card-img-top" src="./assets/speakers/galletas.jpg" alt="Imagen de receta">
+        <div class="card-body">
+            <div class="badges mb-1">
+                <span class="badge badge-js badge-custom">Postre</span>
+                <span class="badge badge-react badge-custom">Galletas</span>
+            </div>
+            <h5 class="card-title mb-2">Galletas a tu gusto</h5>
+            <p class="card-text">
+                Galletas crujientes que puedes personalizar con tus ingredientes favoritos, ideales para cualquier ocasión.
+            </p>
+            <button class="btn btn-light" onclick="openModal('modal18')">Ver receta</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+    <div class="card">
+        <img class="card-img-top" src="./assets/speakers/churros.jpg" alt="Imagen de receta">
+        <div class="card-body">
+            <div class="badges mb-1">
+                <span class="badge badge-react badge-custom">Postre</span>
+                <span class="badge badge-react badge-custom">Churros</span>
+            </div>
+            <h5 class="card-title mb-2">Receta de churros caseros</h5>
+            <p class="card-text">
+                Churros caseros, perfectos para disfrutar con una taza de chocolate caliente.
+            </p>
+            <button class="btn btn-light" onclick="openModal('modal19')">Ver receta</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+    <div class="card">
+        <img class="card-img-top" src="./assets/speakers/Mousse.jpg" alt="Imagen de receta">
+        <div class="card-body">
+            <div class="badges mb-1">
+                <span class="badge badge-js badge-custom">Postre</span>
+                <span class="badge badge-react badge-custom">Chocolate</span>
+                <span class="badge badge-react badge-custom">Mousse</span>
+            </div>
+            <h5 class="card-title mb-2">Mousse de Chocolate</h5>
+            <p class="card-text">
+                Suave mousse de chocolate, ideal para cerrar una comida con un toque dulce y sofisticado.
+            </p>
+            <button class="btn btn-light" onclick="openModal('modal20')">Ver receta</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+    <div class="card">
+        <img class="card-img-top" src="./assets/speakers/Brownies.jpg" alt="Imagen de receta">
+        <div class="card-body">
+            <div class="badges mb-1">
+                <span class="badge badge-js badge-custom">Postre</span>
+                <span class="badge badge-react badge-custom">Chocolate</span>
+                <span class="badge badge-react badge-custom">Brownies</span>
+            </div>
+            <h5 class="card-title mb-2">Brownies Fáciles</h5>
+            <p class="card-text">
+                Brownies fáciles de preparar, con un intenso sabor a chocolate, perfectos para cualquier momento del día.
+            </p>
+            <button class="btn btn-light" onclick="openModal('modal21')">Ver receta</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 mt-4 recipe-card">
+    <div class="card">
+        <img class="card-img-top" src="./assets/speakers/pie_limon.jpg" alt="Imagen de receta">
+        <div class="card-body">
+            <div class="badges mb-1">
+                <span class="badge badge-js badge-custom">Postre</span>
+                <span class="badge badge-react badge-custom">Pie</span>
+            </div>
+            <h5 class="card-title mb-2">Pie de Limón Sin Horno</h5>
+            <p class="card-text">
+                Pie de limón sin horno, una opción refrescante y sencilla para el postre.
+            </p>
+            <button class="btn btn-light" onclick="openModal('modal22')">Ver receta</button>
+        </div>
+    </div>
+</div>
+   
+
+
+      <!-- /Card -->
+    </div>
+  </div>
+</section>
+<!-- /Recipes -->
+
+
+
+
+<!-- Modal Template -->
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h2>Macarrones con queso</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>Macarrones, 50 g.</li>
+          <li>Caldo de pollo, verduras o agua con sal, 120 ml.</li>
+          <li>Leche, 40 ml.</li>
+          <li>Queso Cheddar rallado, 50 g.</li>
+          <li>Condimento, opcional.</li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>En una taza grande o bol ponemos los macarrones con el líquido (caldo de pollo, de verduras, o agua con un poco de sal) y calentamos en el microondas en tandas de 2 minutos y removemos entre tanda y tanda. Es importante que la taza sea grande para que no desborde el líquido, pero si eso ocurre, lo único que tenemos que hacer es añadir una o dos cucharadas más de líquido. Lo normal es que, con 6 minutos en total, los macarrones estén al dente y sin líquido, si están duros y se han quedado sin líquido, añadimos un par de cucharadas y calentamos de nuevo, pero ahora en tandas de 1 minuto hasta que estén cocinados. Si, por el contrario, están al dente, pero aún queda líquido, podemos retirarlo si queremos la salsa espesa o dejarlo si la queremos más ligera.</li>
+
+        <li>En ese momento, añadimos el queso rallado y la leche, mezclamos todo bien y calentamos 1 minuto más.</li>
+
+        <li>Podemos servir con un poco de cebollino picado y algún condimento de su gusto.</li>
+    </ol>
+  </div>
+</div>
+
+
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <h2>Sandwich Vips Club</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>Pan (lo que te comas) </li>
+          <li>Mantequilla. </li>
+          <li>Unas cuantas hojas de lechuga </li>
+          <li>Rodajas de tomate. </li>
+          <li>Mayonesa/ Salsa de tomate. </li>
+          <li>200 g de pollo desmenuzado. </li>
+          <li>Queso del que gustes. </li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>En el caso de que no tengamos el pollo ya cocido lo pondríamos a cocer.</li>
+        <li>Cortamos la lechuga y el tomate.</li>
+        <li>Untamos el pan con mantequilla y también con mayonesa, salsa de tomate a tu gusto y empezamos a montar el sándwich.</li>
+        <li>Lo dividimos en varias partes para que se haga mejor y sea más fácil de cocinar.</li>
+        <li>Añadimos el queso y ponemos un par de palillos para que se sostengan y a disfrutar.</li>
+    </ol>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal5')">&times;</span>
+      <h2>Quesadillas de pollo y queso</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>(375 g.) 3 pechugas de pollo cocidas en cubos.</li>
+          <li>(200 g.) 1 taza de tomate en cuadritos.</li>
+          <li>(500 g.) 10 tortillas de trigo medianas.</li>
+          <li>(150 g.) 10 rebanadas de queso.</li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Colocar cada tortilla sobre una superficie plana, rellenar con pollo, tomate, una rebanada de queso y cerrar en forma de media luna.</li>
+        <li>En un sartén a fuego medio, colocar las tortillas rellenas y calentar durante 2 minutos por cada lado o hasta que estén doradas.</li>
+        <li>Servir y disfrutar.</li>
+    </ol>
+  </div>
+</div>
+
+
+<div id="modal6" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal6')">&times;</span>
+      <h2>Arroz con Salchicha</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>2 cucharadas de Cebolla picada</li>
+          <li>2 cucharadas de chile dulce picado</li>
+          <li>8 salchichas </li>
+          <li>1 taza y media de arroz</li>
+          <li>Consomé </li>
+          <li>Puré de tomate </li>
+          <li>Sal </li>
+          <li>Queso Cheddar rallado, 50 g.</li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Sofreír en el sartén la cebolla y chile dulce (picado)</li>
+        <li>Agregarle las salchichas en rodajas y dejar cocinar hasta que las salchichas se doren </li>
+        <li>Agregarle a la mezcla el arroz, media taza de agua, el puré de tomate, el consomé y por último la sal</li>
+        <li>Revolver la mezcla y dejarlo cocinar aproximadamente de 15 a 20 minutos. </li>
+    </ol>
+  </div>
+</div>
+
+
+<div id="modal7" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal7')">&times;</span>
+      <h2>Tacos de bistec</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>Carne de res </li>
+          <li>Mostaza </li>
+          <li>Sal</li>
+          <li>Pimienta </li>
+          <li>Tortillas </li>
+          <li>Culantro </li>
+          <li>Ajo</li>
+          <li>Cebolla </li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>El primer paso es picar la carne de res, agregarle sal, un diente de ajo rallado, mostaza y pimienta al gusto, luego revolvemos todos estos ingredientes.</li>
+        <li>En segundo lugar poner a cocinar la carne 15 minutos en un sartén con aceite.</li>
+        <li>Un En tercer lugar agregarle la carne cocinada a las tortillas y el culantro picado al gusto. </li>
+    </ol>
+  </div>
+</div>
+
+
+<div id="modal8" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal8')">&times;</span>
+      <h2>Ensalada de atún</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>1 lata de atún en aceite o agua</li>
+          <li>1 tomate</li>
+          <li>1 pepino</li>
+          <li>1/2 cebolla</li>
+          <li>1 pimiento (opcional)</li>
+          <li>Aceite de oliva</li>
+          <li>Vinagre</li>
+          <li>Sal</li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Escurre el atún y desmenúzalo en un bol grande.</li>
+        <li>Lava y corta el tomate, el pepino y el pimiento (si lo usas) en trozos pequeños.</li>
+        <li>Pela y pica la cebolla finamente.</li>
+        <li>Añade las verduras al bol con el atún.</li>
+        <li>Aliña con aceite de oliva, vinagre y sal al gusto.</li>
+        <li>Mezcla bien y sirve.</li>
+    </ol>
+  </div>
+</div>
+
+
+<div id="modal9" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal9')">&times;</span>
+      <h2>Arroz con huevo</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>1 taza de arroz</li>
+          <li>2 tazas de agua</li>
+          <li>2 huevos</li>
+          <li>Aceite de oliva</li>
+          <li>Sal</li>
+          <li>Pimienta</li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Cocina el arroz en una cacerola con las dos tazas de agua y una pizca de sal. Lleva a ebullición, luego reduce el fuego y cocina a fuego lento hasta que el agua se haya absorbido (unos 15-20 minutos).</li>
+        <li>Mientras tanto, en una sartén, calienta un poco de aceite de oliva.</li>
+        <li>Fríe los huevos a tu gusto (con la yema líquida o bien cocida).</li>
+        <li>Sirve el arroz en platos y coloca los huevos fritos encima.</li>
+        <li>Salpimenta al gusto y sirve inmediatamente.</li>
+    </ol>
+  </div>
+</div>
+
+<div id="modal10" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal10')">&times;</span>
+      <h2>Pollo con verduras</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>2 pechugas de pollo</li>
+          <li>4 papas medianas</li>
+          <li>3 zanahorias</li>
+          <li>1 brócoli (aproximadamente 500 g)</li>
+          <li>4 cucharadas de aceite de oliva</li>
+          <li>4 dientes de ajo</li>
+          <li>1 cucharadita de sal</li>
+          <li>1/2 cucharadita de pimienta</li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Precalienta el horno a 200°C. </li>
+        <li>Lava y corta las papas en trozos grandes.</li>
+        <li>Pela y corta las zanahorias en trozos grandes.</li>
+        <li>Lava y corta el brócoli en floretes.</li>
+        <li>Pela y pica finamente los dientes de ajo.</li>
+
+        <li>Sazonar las verduras:
+          Coloca las verduras en una bandeja para hornear.
+          Añade el ajo picado, 3 cucharadas de aceite de oliva, 1/2 cucharadita de sal, y 1/4 cucharadita de pimienta.
+          Mezcla bien para que las verduras queden bien cubiertas de aceite y condimentos.</li>
+
+
+        <li>Preparar el pollo:
+          Coloca las pechugas de pollo encima de las verduras.
+          Sazona las pechugas con la 1/2 cucharadita restante de sal, 1/4 cucharadita de pimienta, y 1 cucharada de aceite de oliva.
+          Si lo deseas, espolvorea las hierbas provenzales sobre el pollo.</li>
+
+
+        <li>Hornear:
+          Hornea durante 25-30 minutos o hasta que el pollo esté cocido (la temperatura interna debe ser de al menos 75°C) y las verduras estén tiernas.
+          </li>
+
+          <li>Servir:
+            Retira del horno y deja reposar unos minutos antes de servir.
+            Sirve caliente y disfruta.</li>
+
+    </ol>
+  </div>
+</div>
+
+
+<div id="modal11" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal11')">&times;</span>
+      <h2>Wrap de pollo y aguacate</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>4 tortillas de harina grandes</li>
+          <li>2 pechugas de pollo cocidas y desmenuzadas (aproximadamente 400 g en total)</li>
+          <li>2 aguacates, cortados en rodajas</li>
+          <li>2 tomates medianos, cortados en rodajas</li>
+          <li>8 hojas de lechuga (puedes usar lechuga romana, iceberg, o la que prefieras)</li>
+          <li>Jugo de 1 limón</li>
+          <li>Sal al gusto (aproximadamente 1/2 cucharadita)</li>
+          <li>Pimienta al gusto (aproximadamente 1/4 cucharadita)</li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Preparar las tortillas:
+          Coloca una tortilla de harina en una superficie plana.</li>
+        <li>Cortamos la lechuga y el tomate.</li>
+        <li>Añadir el relleno:
+          Coloca aproximadamente 100 g de pechuga de pollo desmenuzada en el centro de la tortilla.
+          Añade unas 4-5 rodajas de aguacate encima del pollo.
+          Coloca 3-4 rodajas de tomate sobre el aguacate.
+          Añade 2 hojas de lechuga.</li>
+        <li>Sazonar:
+          Exprime un poco de jugo de limón sobre el relleno (aproximadamente 1 cucharadita por wrap).
+          Sazona con una pizca de sal y pimienta al gusto.
+          </li>
+        <li>Enrollar el wrap:
+          Dobla los lados de la tortilla hacia adentro y luego enrolla desde la parte inferior hasta cerrar el wrap completamente.</li>  
+        <li>
+          Servir:
+          Corta los wraps por la mitad si lo deseas y sirve inmediatamente.
+          ¡Y listo! Disfruta de tu delicioso wrap de pollo y aguacate.
+        </li>
+    </ol>
+  </div>
+</div>
+
+
+<div id="modal12" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal12')">&times;</span>
+      <h2>Pasta con salsa de tomate y atún </h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>400 g de pasta (espaguetis, penne, fusilli, o la que prefieras)</li>
+          <li>2 latas de atún en aceite (aproximadamente 150 g cada una)</li>
+          <li>1 lata de tomate triturado (400 g)</li>
+          <li>1 cebolla mediana</li>
+          <li>2 dientes de ajo</li>
+          <li>2 cucharadas de aceite de oliva</li>
+          <li>Sal al gusto (aproximadamente 1 cucharadita)</li>
+          <li>Pimienta al gusto (aproximadamente 1/2 cucharadita)</li>
+          <li>1 cucharadita de orégano seco (opcional)</li>
+          <li>Perejil fresco picado (opcional, para decorar)</li>
+          <li>Queso parmesano rallado (opcional, para servir)</li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>
+          Cocinar la pasta:
+          Cocina la pasta en una olla grande con agua hirviendo y sal siguiendo las instrucciones del paquete hasta que esté al dente.
+          Escurre la pasta y resérvala.</li>
+        <li>Preparar la salsa:
+          Pela y pica finamente la cebolla y los dientes de ajo.
+          En una sartén grande, calienta 2 cucharadas de aceite de oliva a fuego medio.
+          Añade la cebolla picada y sofríe durante 5 minutos, hasta que esté transparente.
+          Añade el ajo picado y sofríe por 1 minuto más.</li>
+        <li>Añadir los tomates y el atún:
+          Añade la lata de tomate triturado a la sartén. Mezcla bien.
+          Reduce el fuego y deja que la salsa hierva a fuego lento durante unos 10 minutos.
+          Escurre el atún y añádelo a la sartén, mezclando bien para que se integre con la salsa.
+          Añade sal, pimienta y orégano (si lo usas) al gusto.</li>
+        <li>Mezclar la pasta con la salsa:
+          Añade la pasta cocida a la sartén con la salsa.
+          Mezcla bien para que la pasta se impregne con la salsa.
+          Cocina por 2-3 minutos más para que todos los sabores se integren.</li>
+        <li>Servir:
+          Sirve la pasta caliente, espolvoreada con perejil fresco picado y queso parmesano rallado, si lo deseas.</li>
+    </ol>
+  </div>
+</div>
+
+
+
+
+
+
+<div id="modal13" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal13')">&times;</span>
+      <h2>Huevos revueltos con tomate y queso</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>4 huevos</li>
+          <li>2 tomates medianos</li>
+          <li>1/2 taza de queso rallado (puede ser cheddar, mozzarella o el que tengas)</li>
+          <li>2 cucharadas de leche (opcional)</li>
+          <li>1 cucharada de aceite de oliva o mantequilla</li>
+          <li>Sal al gusto (aproximadamente 1/2 cucharadita)</li>
+          <li>Pimienta al gusto (aproximadamente 1/4 cucharadita)</li>
+          <li>1/4 cucharadita de orégano seco (opcional)</li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Batir los huevos:
+          En un bol, bate los 4 huevos con una pizca de sal y pimienta. Si lo deseas, añade las 2 cucharadas de leche para obtener unos huevos más cremosos.     </li>
+        <li>
+          Cocinar los tomates:
+          En una sartén grande, calienta 1 cucharada de aceite de oliva o mantequilla a fuego medio.
+          Añade los tomates cortados y cocínalos durante unos 2-3 minutos hasta que empiecen a ablandarse.     </li>
+        <li>Cocinar los huevos:
+          Reduce el fuego a medio-bajo.
+          Vierte los huevos batidos en la sartén con los tomates.
+          Cocina suavemente los huevos, removiendo constantemente con una espátula de silicona o una cuchara de madera, hasta que estén casi cuajados pero aún ligeramente cremosos.     </li>
+        <li> 
+          Añadir el queso:
+          Añade el queso rallado y el orégano seco (si lo usas) a la sartén.
+          Remueve para combinar y cocina por 1 minuto más, o hasta que el queso se haya derretido y los huevos estén cocidos a tu gusto.    </li>
+        <li> 
+          Servir:
+          Sirve los huevos revueltos calientes, acompañados de pan tostado si lo deseas.    </li>
+    </ol>
+  </div>
+</div>
+
+
+<div id="modal14" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal14')">&times;</span>
+      <h2>Sandwich Vips Club</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>2 tazas de yogur natural o yogur griego (aproximadamente 500 g) </li>
+          <li>1 taza de fresas, cortadas en trozos </li>
+          <li>1 plátano, cortado en rodajas </li>
+          <li>1/2 taza de arándanos </li>
+          <li>1 kiwi, pelado y cortado en trozos </li>
+          <li>1/2 taza de mango, pelado y cortado en trozos </li>
+          <li>2 cucharadas de miel o sirope de arce (al gusto) </li>
+          <li>Opcional: 1/4 taza de granola </li>
+          <li>Opcional: 2 cucharadas de nueces picadas </li>
+          <li>Opcional: 1 cucharada de semillas de chía </li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Preparar el yogur: Coloca 1 taza de yogur en cada tazón o cuenco.</li>
+        <li>Añadir las frutas: Reparte las frutas frescas cortadas (fresas, plátano, arándanos, kiwi, mango) entre los dos tazones, colocándolas sobre el yogur.</li>
+        <li>Añadir la miel o sirope: Rocía aproximadamente 1 cucharada de miel o sirope de arce sobre las frutas y el yogur en cada tazón.</li>
+        <li>Añadir toppings opcionales: Si lo deseas, añade un puñado de granola (aproximadamente 2 cucharadas por tazón), nueces picadas (1 cucharada por tazón), y/o semillas de chía (1/2 cucharada por tazón) como toppings saludables.</li>
+        <li>Servir:Revuelve ligeramente para mezclar todos los ingredientes y disfruta de tu delicioso y refrescante yogur con frutas como postre o snack saludable.</li>
+    </ol>
+  </div>
+</div>
+
+<div id="modal15" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal15')">&times;</span>
+      <h2>Batido de Frutas</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>1 plátano maduro </li>
+          <li>1 taza de frutas congeladas (pueden ser fresas, arándanos, mango, piña, etc.) </li>
+          <li>1 taza de leche (puede ser leche de vaca, leche de almendras, leche de coco, etc.) </li>
+          <li>Opcional: miel o sirope de arce para endulzar, espinacas frescas para agregar verduras </li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Pelar y cortar el plátano en trozos.</li>
+        <li>En una licuadora, agregar el plátano, las frutas congeladas y la leche.</li>
+        <li>Si deseas endulzar el batido, añade un poco de miel o sirope de arce al gusto.</li>
+        <li>Opcionalmente, puedes agregar un puñado de espinacas frescas para obtener un impulso adicional de verduras.</li>
+        <li>Licúa todos los ingredientes hasta obtener una mezcla suave y cremosa.</li>
+        <li>Vierte el batido en un vaso y sírvelo inmediatamente.</li>
+        <li>¡Disfruta de este refrescante y nutritivo batido de frutas como un postre o un desayuno rápido y saludable!</li>
+    </ol>
+  </div>
+</div>
+
+
+<div id="modal16" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal16')">&times;</span>
+      <h2>Tostadas de Aguacate y Huevo </h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>4 rebanadas de pan integral </li>
+          <li>2 aguacates maduros </li>
+          <li>2 huevos </li>
+          <li>1 cucharada de aceite de oliva </li>
+          <li>Sal al gusto </li>
+          <li>Pimienta al gusto </li>
+          <li>Opcional: hojuelas de chile, semillas de sésamo o cilantro fresco picado </li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Tuesta las rebanadas de pan hasta que estén doradas y crujientes.</li>
+        <li>Mientras tanto, pela y aplasta los aguacates en un bol pequeño. Añade sal y pimienta al gusto.</li>
+        <li>En una sartén, calienta el aceite de oliva a fuego medio y fríe los huevos hasta que las claras estén cocidas pero las yemas aún estén líquidas (o al gusto).</li>
+        <li>Unta el aguacate sobre las tostadas.</li>
+        <li>Coloca un huevo frito encima de cada tostada.</li>
+        <li>Añade más sal y pimienta al gusto y, si lo deseas, decora con hojuelas de chile, semillas de sésamo o cilantro fresco.</li>
+    </ol>
+  </div>
+</div>
+
+<div id="modal17" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal17')">&times;</span>
+      <h2>Panqueques de Plátano </h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>2 plátanos maduros </li>
+          <li>2 huevos </li>
+          <li>1/4 taza de harina de avena o de trigo </li>
+          <li>1/2 cucharadita de polvo de hornear </li>
+          <li>1/4 cucharadita de canela (opcional) </li>
+          <li>1/2 cucharadita de vainilla (opcional) </li>
+          <li>Aceite o mantequilla para cocinar </li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>En un bol grande, aplasta los plátanos hasta obtener un puré.</li>
+        <li>Añade los huevos y bate bien hasta que estén completamente integrados.</li>
+        <li>Añade la harina, el polvo de hornear, la canela y la vainilla. Mezcla bien hasta obtener una masa homogénea.</li>
+        <li>Calienta una sartén antiadherente a fuego medio y engrásala ligeramente con aceite o mantequilla.</li>
+        <li>Vierte pequeñas cantidades de masa en la sartén para formar los panqueques.</li>
+        <li>Cocina cada panqueque durante 2-3 minutos por cada lado, hasta que estén dorados.</li>
+        <li>Sirve calientes con tus toppings favoritos (miel, frutas frescas, yogur, etc.).</li>
+    </ol>
+  </div>
+</div>
+
+
+<div id="modal18" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal18')">&times;</span>
+      <h2>Galletas a tu gusto</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>100 gr de azúcar </li>
+          <li>50 ml de aceite </li>
+          <li>1 cucharadita de vainilla </li>
+          <li>1 huevo </li>
+          <li>150 gr de harina  </li>
+          <li>1 pizca de sal </li>
+          <li>1 cucharadita de polvo de hornear </li>
+          <li>Decoración a gusto: lluvia de chocolate, grageas de colores, gotas de chocolate, azúcar, maní, coco, lo que tengas en casa. </li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Decoración a gusto: lluvia de chocolate, grageas de colores, gotas de chocolate, azúcar, maní, coco, lo que tengas en casa.</li>
+        <li>Preparación: En un bol coloca el aceite, el azúcar, la vainilla y el huevo. Mezcla con un batidor de globo por unos minutos hasta que emulsione. Agrega la harina, la sal y el polvo para hornear. Mezcla bien. Unta tus manos con un poquito de aceite y forma bolitas. Pasa por lluvia de colores, de chocolate o el topping de tu preferencia.</li>
+        <li>Lleva a horno precalentado a 180° por 12-15 minutos o hasta que doren ligeramente. No hornear de más para que no queden duras.</li>
+    </ol>
+  </div>
+</div>
+
+
+<div id="modal19" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal19')">&times;</span>
+      <h2>Churros caseros</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>300 g de harina </li>
+          <li>440 g de agua </li>
+          <li>1 cucharadita de sal </li>
+          <li>Azúcar para espolvorear </li>
+          <li>Aceite de oliva suave para freír </li>
+          <li>Papel de cocina (para absorber exceso de aceite) </li>
+          <li>Manga pastelera con boca fina o churrera (si no tienes alguna de ellas te servirá una bolsa que esté limpia para el proceso) </li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Cómo hacer churros casero: Masa de los churros</li>
+        <li>En un bol añadimos la harina.</li>
+        <li>En una cazuela calentamos el agua con la sal, y cuando comience a hervir, vertemos directamente de una sola vez sobre la harina.</li>
+        <li>Con una cuchara de madera integramos la harina con el agua, nos quedará una masa muy pegajosa y bastante compacta. </li>
+        <li>Dejamos reposar esta masa cubierta con un paño o film de cocina durante sólo unos minutos porque al enfriarse endurece y es más difícil de trabajar.</li>
+        <li>Introducimos la masa en la churrera o manga pastelera con una boquilla en forma de estrella, este paso es fundamental para que los churros salgan bien, y no haya ningún problema a la hora de freír los churros.</li>
+
+        <li>
+          Cómo freír churros:
+          Ponemos abundante aceite de oliva suave para freír en una sartén.
+          Ponemos parte de la masa en la churrera o lo que tengas.</li>
+        <li>Enroscamos y empujamos el émbolo. A medida que empujamos va saliendo la masa del churro por el orificio, cortamos a la medida deseada con un cuchillo o con el dedo y freímos en el aceite.
+          Otra opción si no tienes mucha experiencia con la churrera es ir colocando la masa sobre una superficie limpia y seca, vamos haciendo tiras largas con la churrera y después los cortamos del tamaño que queramos. Luego solo tienes que cogerlos con cuidado e ir introduciendo en el aceite con cuidado, de esta forma evitamos que nos salpique el aceite.
+          Cocinamos a fuego medio, la temperatura del aceite debe estar entre 195 y 200ºC</li>
+    </ol>
+  </div>
+</div>
+
+<div id="modal20" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal20')">&times;</span>
+      <h2>Mousse de chocolate</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>200 g de chocolate negro </li>
+          <li>3 huevos, separadas las claras de las yemas </li>
+          <li>3 cucharadas de azúcar </li>
+          <li>1 taza de crema para batir (250 ml) </li>
+          <li>1 pizca de sal </li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Derrite el chocolate en baño maría o en el microondas en intervalos de 30 segundos, removiendo entre cada intervalo hasta que esté completamente derretido. Deja enfriar un poco.</li>
+        <li>Bate las yemas con el azúcar hasta obtener una mezcla pálida y cremosa.</li>
+        <li>Añade el chocolate derretido a las yemas batidas y mezcla bien.</li>
+        <li>Bate la crema hasta que forme picos suaves.</li>
+        <li>Incorpora la crema batida a la mezcla de chocolate con movimientos envolventes.</li>
+        <li>Bate las claras con una pizca de sal hasta que formen picos firmes.</li>
+        <li>Incorpora las claras batidas a la mezcla de chocolate con movimientos envolventes.</li>
+        <li>Reparte la mousse en recipientes individuales y refrigera durante al menos 2 horas antes de servir.</li>
+    </ol>
+  </div>
+</div>
+
+
+<div id="modal21" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal21')">&times;</span>
+      <h2>Brownies fáciles</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>Ingredientes (para 16 brownies): </li>
+          <li>1 taza de mantequilla (225 g) </li>
+          <li>1 taza de azúcar (200 g) </li>
+          <li>1 taza de azúcar moreno (220 g) </li>
+          <li>4 huevos </li>
+          <li>1 taza de harina de trigo (125 g) </li>
+          <li>1 taza de cacao en polvo (100 g) </li>
+          <li>1 cucharadita de esencia de vainilla </li>
+          <li>1/2 cucharadita de sal </li>
+          <li>1/2 taza de chispas de chocolate (opcional) </li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Precalienta el horno a 180°C (350°F).</li>
+        <li>Derrite la mantequilla en una cacerola a fuego medio y deja enfriar ligeramente.</li>
+        <li>En un bol grande, mezcla la mantequilla derretida con el azúcar y el azúcar moreno.</li>
+        <li>Añade los huevos uno a uno, batiendo bien después de cada adición.</li>
+        <li>Incorpora la esencia de vainilla.</li>
+        <li>En otro bol, mezcla la harina, el cacao en polvo y la sal.</li>
+        <li>Añade los ingredientes secos a la mezcla de mantequilla y huevos, y mezcla hasta que estén bien incorporados.</li>
+        <li>Si deseas, añade las chispas de chocolate y mezcla bien.</li>
+        <li>Vierte la mezcla en un molde cuadrado de 9x9 pulgadas (23x23 cm) engrasado o forrado con papel pergamino.</li>
+        <li>Hornea durante 25-30 minutos, o hasta que un palillo insertado en el centro salga con algunas migajas húmedas.</li>
+        <li>Deja enfriar completamente antes de cortar en cuadrados y servir.</li>
+    </ol>
+  </div>
+</div>
+
+<div id="modal22" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal('modal22')">&times;</span>
+      <h2>Pie de Limón</h2>
+      <p>Ingredientes:</p>
+      <ol>
+          <li>Para la base: 1 1/2 tazas de galletas trituradas (galletas tipo María o graham crackers) </li>
+          <li>1/4 taza de azúcar (50 g) </li>
+          <li>1/2 taza de mantequilla derretida (115 g) </li>
+          <li>Para el relleno: 1 lata de leche condensada (aproximadamente 400 g) </li>
+          <li>1/2 taza de jugo de limón (aproximadamente 4-5 limones) </li>
+          <li>1 taza de crema para batir (250 ml), batida a punto firme </li>
+          <li>Ralladura de 1 limón </li>
+          <li>Para decorar (opcional): Ralladura de limón </li>
+          <li>Rodajas de limón </li>
+      </ol>
+      <p>Preparación:</p>
+      <ol>
+        <li>Preparar la base: En un bol, mezcla las galletas trituradas con el azúcar y la mantequilla derretida.</li>
+        <li>Presiona la mezcla de galletas en el fondo y los lados de un molde para pie de aproximadamente 9 pulgadas (23 cm).</li>
+        <li>Coloca la base en el refrigerador para que se endurezca mientras preparas el relleno.</li>
+        <li>Preparar el relleno: En un bol grande, mezcla la leche condensada, el jugo de limón y la ralladura de limón hasta que estén bien combinados.</li>
+        <li>Bate la crema para batir hasta que forme picos firmes.</li>
+        <li>Incorpora la crema batida a la mezcla de limón con movimientos envolventes hasta que esté bien integrada.</li>
+        <li>Refrigera el pie de limón durante al menos 4 horas, o hasta que el relleno esté firme.</li>
+        <li>Decorar (opcional): Antes de servir, decora el pie con ralladura de limón y rodajas de limón si lo deseas.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- / Modal Template -->
+
+<script>
+  function openModal(modalId) {
+      document.getElementById(modalId).style.display = "block";
+  }
+
+  function closeModal(modalId) {
+      document.getElementById(modalId).style.display = "none";
+  }
+
+  window.onclick = function(event) {
+      var modals = document.getElementsByClassName('modal');
+      for (var i = 0; i < modals.length; i++) {
+          if (event.target == modals[i]) {
+              modals[i].style.display = "none";
+          }
+      }
+  }
+</script>
+
+
+
+
+  <!-- Modal btn -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal-compra" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Suscríbete</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="form-row">
+              <div class="form-group col">
+                <!-- Formulario para el correo -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Correo electrónico" aria-label="Correo electrónico"
+                    aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="alert alert-success" role="alert">
+            Te notificaremos sobre nuevas recetas y eventos culinarios por correo electrónico.
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-platzi">Suscribirse</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Modal -->
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
